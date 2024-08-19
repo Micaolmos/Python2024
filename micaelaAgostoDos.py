@@ -14,15 +14,17 @@ listaTareas=[]
 diccionario = {}
 while True: 
     menu()
+    opcion = int(input("ingrese una opcion:"))
     if opcion == 1:
         Tarea:int(input("Ingresa la nueva tarea:"))
         print("Se guardo tu nueva tarea")
+        listaTareas.append
 
     elif opcion == 2: 
-        print:listaTareas=[]
-
-
-    elif opcion == 4:
-       print("Adios, gracias por usar el codigo")
-    break
-listaTareas.append(Tarea)
+        if not listaTareas:
+         print("No hay tareas en la lista.")
+    else:
+         print(listaTareas =[])
+    
+    
+    
