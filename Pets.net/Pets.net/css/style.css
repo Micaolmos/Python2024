@@ -2,14 +2,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #F7DF72;
+    background-color: #ffffff;
 }
 
 header, footer {
-    background-color:#FABC2A;
+    background-color:#ffc94b;
     color:#f9f9f9;
-    text-align: center;
     padding: 1em;
+    flex-direction: row;
 }
 
 main {
