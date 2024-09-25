@@ -1,3 +1,4 @@
+import random
 class Personaje:
     #atributo de clase
   estado = True #vivo
@@ -15,7 +16,7 @@ def __int__(self, nombre, altura, velocidad, resistencia, fuerza):
 def atacar(self, otro_personaje):
     if self.estado: #si estoy vivo es lo mismo que self
        danio = self.fuerza - (otro_personaje.resistencia)
-       danio = max (0,danio) #no puede ser negativo
+       print(f"{self.nombre} ataca a {otro_personaje.nombre} causado {danio} de daño:")
        otro_personaje.recibir_dano(danio)#llamando al metodo
     else:
       print(f"{self.nombre}muerto")
@@ -26,7 +27,7 @@ def recibir_danio(self, cantidad):
     if self.estado:
         self.vida = self.vida  -  cantidad #self.vida = cantida
         print(f"{self.nombre} recibe {cantidad} de danio. Vida resta")
-        if self.vida <=0:
+        if self.vida <=0: #Si vida es igual o menor a 0 vida es igual a 0 para que no nos de numeros negativos
           self.vida = 0
           print(f"{self.nombre} ya muerto")
     else:
@@ -34,9 +35,11 @@ def recibir_danio(self, cantidad):
 #Muestra cuando esta muerto y la cantidad de vida que pierde
 def mostrar_info(self):
         print(f"Nombre: {self.nombre}")
-        print(f"Altura: {self.altura}")
+        print(f"Altura: {self.altura} cm")
         print(f"Velocidad: {self.velocidad}")
         print(f"Resistencia: {self.resistencia}")
         print(f"Fuerza: {self.fuerza}")
+
+nuevo_personaje = Personaje()
 
 #Muestra en la pantalla la información del personaje.
