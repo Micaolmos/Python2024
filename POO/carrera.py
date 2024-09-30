@@ -17,23 +17,23 @@ while True:
 
     if opcion == 1:
         nombre = input("Escribe el nombre del personaje: ")
-        altura = input("Escribe la altura de tu persoanje: ")
-        velocidad = input("Escribe la velocidad de tu personaje: ")
-        fuerza = input("Escribe la fuerza del personaje: ")
-        resistencia = input("Escribe la resistecia de tu personaje: ")
-
-        nuevo_personaje = Personaje(nombre, altura, velocidad, fuerza, resistencia)
-        cantidadPersonaje += 1
-        personajes.append(nuevo_personaje)
+        altura = int(input("Escribe la altura de tu persoanje: "))
+        velocidad = int(input("Escribe la velocidad de tu personaje: "))
+        resistencia = int(input("Escribe la resistecia de tu personaje: "))
+        fuerza = int(input("Escribbe la fuerza de tu personaje: "))
+  
+        nuevo_personaje = Personaje(nombre, altura, velocidad, resistencia, fuerza)
+        personajes.append (nuevo_personaje)
 
         cantidadPersonaje = 1
         print(f"El personaje {nuevo_personaje.nombre} ha sido creado ")
         print(f"Cantidad de personajes creados: {cantidadPersonaje}")
-    #Crea los personajes, te muestra la cantidad de personajes que hay
+        #Crea los personajes, te muestra la cantidad de personajes que hay
 
     elif opcion == 2:
       if cantidadPersonaje == 0 or cantidadPersonaje == 1:
           print("Nesecitas dos personajes para jugar")
+          continue
       else:
           print("Iniciado el juego con los personajes")
           for personaje in personajes:

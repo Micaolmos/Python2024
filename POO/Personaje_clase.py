@@ -14,7 +14,7 @@ def __int__(self, nombre, altura, velocidad, resistencia, fuerza):
       self.vida = Personaje.vida
 
 def atacar(self, otro_personaje):
-    if self.estado: #si estoy vivo es lo mismo que self
+    if self.estado: #si estoy vivo 
        danio = self.fuerza - (otro_personaje.resistencia)
        print(f"{self.nombre} ataca a {otro_personaje.nombre} causado {danio} de daño:")
        otro_personaje.recibir_dano(danio)#llamando al metodo
