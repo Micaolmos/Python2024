@@ -23,10 +23,11 @@ while True:
         fuerza = int(input("Escribbe la fuerza de tu personaje: "))
   
         nuevo_personaje = Personaje(nombre, altura, velocidad, resistencia, fuerza)
-        personajes.append (nuevo_personaje)
+        personajes.append(nuevo_personaje)
+        print(f"tu personaje{nuevo_personaje.nombre} se ha creado ")
 
-        cantidadPersonaje = 1
-        print(f"El personaje {nuevo_personaje.nombre} ha sido creado ")
+        cantidadPersonaje = +1
+        #print(f"El personaje {nuevo_personaje.nombre} ha sido creado ")
         print(f"Cantidad de personajes creados: {cantidadPersonaje}")
         #Crea los personajes, te muestra la cantidad de personajes que hay
 
@@ -36,6 +37,7 @@ while True:
           continue
       else:
           print("Iniciado el juego con los personajes")
+         #revisar lineas 41 y 42
           for personaje in personajes:
            print(f"{personaje.nombre}")
     
