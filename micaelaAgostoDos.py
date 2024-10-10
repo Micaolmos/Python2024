@@ -25,6 +25,15 @@ while True:
          print("No hay tareas en la lista.")
     else:
          print(listaTareas =[])
+
+    elif opcion == "3":
+            completar_tarea(tareas)
     
+    elif opcion == "4":
+            print("¡Nos vemos luego, chau!")
+            break
+        else:
+            print("Opción no válida, intenta de nuevo.")
+            continue
     
     
