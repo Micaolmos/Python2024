@@ -25,4 +25,13 @@ class Estudiante:
     def obtener_estudiantes():
         #Cónectar a la base de datos 'escolar.db'
         conn = sqlite3.connect('escolar.db')
-        c = conn.cursor() # Crear un cursor 
+        c = conn.cursor() # Crear un cursor para interactuar con la base de datos.
+
+        # Ejecutar una consulta SQL para seleccionar todos los registros de la tabla 'Estudiantes'.
+        c.execute('SELECT * FROM Estudiantes')
+
+        estudiantes = c.fetchall() # Obtener todos los registros encontrados.
+        conn.close() # Cerrar la conexión a la base de datos.
+
+        return estudiantes # Devolver la lista de estudiantes. 
+         
