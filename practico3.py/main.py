@@ -35,4 +35,35 @@ def main():
         if opcion == "1" :
             nombre = input("Nombre del estudiante: ")
             edad = input("Edad del estudiante: ")
-            Estudiante
+            ClsEstudiante.agreagar(conn, nombre, edad)
+        elif opcion == "2" :
+            nombre = input("Nombre del profesor: ")
+            edad = input("Edad del profesor: ")
+            ClsProfesor.agregar(conn, nombre, edad)
+        elif opcion == "3":
+            nombre = input("Introduce el nombre de la materia: ")
+            ClsMateria.agregar(conn, nombre)
+        elif opcion == "4":
+            id_estudiante = input("ID del estudiante: ")
+            id_materia = input("ID de la materia: ")
+            nota = input("calidficación: ")
+            ClsCalificacion.agregar(conn, id_estudiante, id_materia, nota)
+        elif opcion == "5":
+            ClsEstudiante.mostrar_todos(conn)
+        elif opcion == "6":
+            ClsProfesor.mostrar_todos(conn)
+        elif opcion == "7":
+            ClsMateria.mostrar_todos(conn)
+        elif opcion == "8":
+            ClsCalificacion.mostrar_todos(conn)
+        elif opcion == "9":
+            print("saliendo del sistema...")
+            break
+        else:
+            print("Opción no válida, intente nuevamente.")
+
+        #Cierre la coneción a la base de datos al salir del programa 
+        conn.close()
+
+    #Punto de entrada del programa
+   

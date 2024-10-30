@@ -33,5 +33,4 @@ class Estudiante:
         estudiantes = c.fetchall() # Obtener todos los registros encontrados.
         conn.close() # Cerrar la conexión a la base de datos.
 
-        return estudiantes # Devolver la lista de estudiantes. 
-         
+        return estudiantes # Devolver la lista de estudiantes.          
