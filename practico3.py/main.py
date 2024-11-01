@@ -66,4 +66,5 @@ def main():
         conn.close()
 
     #Punto de entrada del programa
-   
+    if __name__ == "_main_":
+        main()

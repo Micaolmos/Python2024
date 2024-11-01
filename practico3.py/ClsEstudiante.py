@@ -2,11 +2,16 @@ import sqlite3 #Nesecesario para trabajar con la base de datos SQLite
 
 class Estudiante:
     # Método constructor que inicializa las propiedades del objeto Estudiante.
-    def __init__(self, nombre, edad, año_id):
+    def __init__(self, nombre, edad,legajo_id, dni, apellido, fecha_nacimiento, curso, estado, email ):
+        self.legajo_id = legajo_id #ID del estudiante 
+        self.dni = dni #DNI del estudiante 
         self.nombre = nombre # Nombre del estudiante.
+        self.apellido = apellido #Apellido del estudiante 
         self.edad = edad # Edad del estudiante.
-        self.año_id = año_id # ID del año academico del estudiante.
-
+        self.fecha_nacimiento = fecha_nacimiento #Fecha de nacimiento del estudiante
+        self.curso = curso #Curso del estudiante
+        self.estado = estado #Estado del estudiante
+        self.email = email #Email del estudiante
     # Método para guardar la información del estudiante en la base de datos.
     def guardar(self):
         # Conectar a la base de datos 'escolar.db'.
@@ -15,7 +20,7 @@ class Estudiante:
 
         # Ejecutar una consulta SQL para insertar los datos del estudiate. 
         c.execute('INSERT INTO Estudiante (nombre, edad, año_id) VALUES (?,?,?)',
-                (self.nombre, self.edad, self.año_id))
+                (self.legajo_id, self.dni, self.nombre, self.apellido, self.edad, self.fecha_nacimiento, self.curso, self.estado, self.email))
 
         conn.commit() # Guardar(confirmar) los cambios en la base de datos .
         conn.close() # Cerrar la conexión a la base de datos.

@@ -2,8 +2,12 @@ import sqlite3 #Nesecesario para trabajar con la base de datos SQLite
 
 class Materia:
     # Método constructor que inicializa las propiedades del objeto Materias
-    def __init__(self, nombre ):
-        self.nombre = nombre # Nombre de la materia 
+    def __init__(self, id_materia, nombre_materia, curso_materia, descripcion, horario  ):
+        self.id_materia = id_materia #ID de la materia 
+        self.nombre_materia = nombre_materia #Nombre de la materia 
+        self.curso_materia = curso_materia #Curso donde pertenece la materia 
+        self.descripcion = descripcion #Descripción de la materia.
+        self.horario = horario #Horario de la materia 
     # Método para guardar la información de la materia en la base de datos.
     def guardar(self):
         # Conectar a la base de datos 'escolar.db'.
