@@ -32,7 +32,7 @@ def main():
         opcion = input("Selecione una opcion: ")
 
         #Procesa la opcion ingresada por el usuario.
-        if opcion == "1" :
+        if opcion == 1 :
             nombre = input("Nombre del estudiante: ")
             edad = input("Edad del estudiante: ")
             ClsEstudiante.agreagar(conn, nombre, edad)
