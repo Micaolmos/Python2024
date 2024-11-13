@@ -19,7 +19,7 @@ def main():
 
     #Bucle infinito hasta que el usuario decida salir
     while True:
-        print("/nSistema de Gestión Escolar")
+        print("Sistema de Gestión Escolar")
         print("1. Agregar estudiante")
         print("2. Agregar profesor")
         print("3. Agregar materia")
@@ -32,7 +32,7 @@ def main():
         opcion = input("Selecione una opcion: ")
 
         #Procesa la opcion ingresada por el usuario.
-        if opcion == 1 :
+        if opcion == "1" :
             nombre = input("Nombre del estudiante: ")
             edad = input("Edad del estudiante: ")
             ClsEstudiante.agreagar(conn, nombre, edad)
